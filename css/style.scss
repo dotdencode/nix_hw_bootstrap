@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=noswap');
+
+$main_color: #9B1E1E;
+
+@mixin forFooter {
+    margin-top: 30px;
+    color: white;
+    font-size: 18px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.general-info{
+    width: 100%;
+    height: 300px;
+    background-color: $main_color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo{
+    color: #fff;
+    font-weight: bold;
+    font-size: 64px;
+    margin: 10px;
+}
+
+.contacts{
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav-item{
+    font-size: 20px;
+    transition: transform 0.1s ease-in;
+
+    &:hover{
+        color: #000;
+        transform: scale(1.1);
+        border-bottom: 3px solid $main_color;
+    }
+}
+
+.progress{
+    height: 10px;
+    border-radius: 0;
+}
+
+.progress-bar{
+    background-color: $main_color;
+}
+
+h3{
+    font-size: 36px;
+    margin-top: 55px;
+    margin-left: 150px;
+    margin-bottom: 20px;
+    border-left: 5px solid $main_color;
+    padding-left: 10px;
+}
+
+.accordion-flush{
+    border: 1px solid $main_color;
+}
+
+img{
+    width: 80px;
+    height: 450px;
+}
+
+.carousel-control-prev-icon{
+    background-color: $main_color;
+    border-radius: 50%;
+}
+
+.carousel-control-next-icon{
+    background-color: $main_color;
+    border-radius: 50%;
+}
+
+.carousel-indicators .active{
+    background-color: $main_color;
+}
+
+.accordion-button:focus{
+    color: $main_color;
+    background-color: #fff;
+}
+
+.btn{
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    padding: 3px;
+    background-color: #fff;
+    border: 1px solid $main_color;
+    border-radius: 15px;
+
+    &:hover{
+        background-color: $main_color;
+        color: #fff;
+    }
+
+
+}
+
+.form-control{
+    border: 1px solid $main_color !important;
+}
+
+.footer{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    background-color: $main_color;
+    justify-content: space-around;
+}
+
+.copy{
+    @include forFooter();
+}
+
+.info{
+    @include forFooter();
+}
+
+.info a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#tooltip {
+    background: #333;
+    color: white;
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 4px;
+    display: none;
+  }
+
+  #tooltip[data-show] {
+    display: block;
+  }
+
+  #arrow,
+  #arrow::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+  }
+
+  #arrow {
+    visibility: hidden;
+  }
+
+  #arrow::before {
+    visibility: visible;
+    content: '';
+    transform: rotate(45deg);
+  }
+
+  #tooltip[data-popper-placement^='top'] > #arrow {
+    bottom: -4px;
+  }
+
+  #tooltip[data-popper-placement^='bottom'] > #arrow {
+    top: -4px;
+  }
+
+  #tooltip[data-popper-placement^='left'] > #arrow {
+    right: -4px;
+  }
+
+  #tooltip[data-popper-placement^='right'] > #arrow {
+    left: -4px;
+  }
