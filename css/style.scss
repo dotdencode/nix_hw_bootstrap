@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=noswap');
 
-$main_color: #9B1E1E;
+$bgLightColor: #9B1E1E;
+$fontLightColor: #fff;
 
 @mixin forFooter {
     margin-top: 30px;
@@ -14,15 +15,10 @@ $main_color: #9B1E1E;
     box-sizing: border-box;
 }
 
-body{
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
-    background-color: #f8f9fa;
-}
-
 .general-info{
     width: 100%;
     height: 300px;
-    background-color: $main_color;
+    background-color: $bgLightColor;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -30,16 +26,24 @@ body{
 }
 
 .logo{
-    color: #fff;
+    color: $fontLightColor;
     font-weight: bold;
     font-size: 64px;
     margin: 10px;
 }
 
 .contacts{
-    color: #fff;
+    color: $fontLightColor;
     font-weight: bold;
     font-size: 18px;
+}
+
+.themes span{
+    display: inline-block;
+    color: $fontLightColor;
+    margin-right: 10px;
+    font-size: 20px;
+    margin-left: 5px;
 }
 
 .nav-item{
@@ -49,7 +53,7 @@ body{
     &:hover{
         color: #000;
         transform: scale(1.1);
-        border-bottom: 3px solid $main_color;
+        border-bottom: 3px solid $bgLightColor;
     }
 }
 
@@ -59,7 +63,7 @@ body{
 }
 
 .progress-bar{
-    background-color: $main_color;
+    background-color: $bgLightColor;
 }
 
 h3{
@@ -67,12 +71,12 @@ h3{
     margin-top: 55px;
     margin-left: 150px;
     margin-bottom: 20px;
-    border-left: 5px solid $main_color;
+    border-left: 5px solid $bgLightColor;
     padding-left: 10px;
 }
 
 .accordion-flush{
-    border: 1px solid $main_color;
+    border: 1px solid $bgLightColor;
 }
 
 img{
@@ -81,21 +85,21 @@ img{
 }
 
 .carousel-control-prev-icon{
-    background-color: $main_color;
+    background-color: $bgLightColor;
     border-radius: 50%;
 }
 
 .carousel-control-next-icon{
-    background-color: $main_color;
+    background-color: $bgLightColor;
     border-radius: 50%;
 }
 
 .carousel-indicators .active{
-    background-color: $main_color;
+    background-color: $bgLightColor;
 }
 
 .accordion-button:focus{
-    color: $main_color;
+    color: $bgLightColor;
     background-color: #fff;
 }
 
@@ -107,19 +111,17 @@ img{
     text-align: center;
     padding: 3px;
     background-color: #fff;
-    border: 1px solid $main_color;
+    border: 1px solid $bgLightColor;
     border-radius: 15px;
 
     &:hover{
-        background-color: $main_color;
+        background-color: $bgLightColor;
         color: #fff;
     }
-
-
 }
 
 .form-control{
-    border: 1px solid $main_color !important;
+    border: 1px solid $bgLightColor !important;
 }
 
 .footer{
@@ -129,7 +131,7 @@ img{
     position: relative;
     left: 0;
     bottom: 0;
-    background-color: $main_color;
+    background-color: $bgLightColor;
     justify-content: space-around;
 }
 
@@ -147,6 +149,6 @@ img{
 }
 
 .modal-body{
-    background-color: $main_color;
+    background-color: $bgLightColor;
     color: #fff;
 }
